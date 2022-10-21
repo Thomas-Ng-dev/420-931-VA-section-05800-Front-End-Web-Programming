@@ -1,0 +1,141 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.flexContainer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    position: relative;
+}
+
+
+#navList
+{
+    display: flex;
+    background-color: red;
+    font: x-large;
+    /* align-self: stretch; */
+}
+
+#navButtonName
+{
+    margin: 0px;
+    padding: 20px;
+    font-size: large;
+    height: 100%;
+    color: white;
+    background-color: black;
+}
+
+.navButton
+{
+    margin: 0px;
+    padding: 20px;
+    font-size: large;
+    height: 100%;
+    color: wheat;
+    border-style: solid;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column
+{
+    display: flex;
+    flex-direction: column;
+    flex: 25%;
+    max-width: 25%;
+}
+
+.hamburgerMenuIcon
+{
+    display: none;
+}
+.hamburgerContainer
+{
+    align-self: flex-end;
+}
+.bar1, .bar2, .bar3 
+{
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+}
+.navBarNameMobile
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+@media screen and (max-width: 800px) 
+{
+    .flexContainer
+    {
+        /* display: flex; */
+        /* justify-content: center; */
+        background-color: purple;
+        flex-direction: column;
+    }
+
+    #navList
+    {
+        display: none;
+    }
+
+    #navButtonName
+    {
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        padding-bottom: 25px;
+        padding-top: 25px;
+        font-size: large;
+        height: 100%;
+        width: 100%;
+        color: white;
+        background-color: black;
+    }
+
+    .column 
+    {
+        display: flex;
+        flex-direction: column;
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .hamburgerMenuIcon
+    {
+        position: absolute;
+        right: 20px;
+        display: flex;
+        /* display: block;
+        float: right; */
+    }
+    #navButtonName:hover
+    {
+        color: black;
+        background-color: white;
+    }
+    .flexContainer:hover #navList
+    {
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
