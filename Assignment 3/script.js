@@ -1,50 +1,66 @@
-// Assignment 3 (part a)
+const shoppingList = document.querySelector("#shoppingList") 
+const addItem = document.querySelector("#addItem")
+const listedItems = document.querySelector("ul")
 
-// 1 - Add two integers
-
-let addTwoIntegers = (value1, value2) =>
+shoppingList.addEventListener("click", onClick)
+function onClick()
 {
-    return value1 + value2
+    if (addItem.style.display == 'block') 
+    {
+        addItem.style.display = 'none'
+        addItem.value = "";
+    } 
+    else 
+    {
+        addItem.style.display = 'block';
+    }
+    
 }
-console.log("Question 1: " + addTwoIntegers(1, 1))
 
-// 2 - Sort an array
+addItem.addEventListener("keypress", onEnter)
 
-let concatAndSort = (array1, array2) =>
+function onEnter(event)
 {
-    return arraySorted = array1.concat(array2).sort()
+    // If user presses Enter
+    if(event.key === 'Enter' && addItem.value !=="" && addItem.value.trim() !=="")
+    {
+        // Create HTML element li
+        const li = document.createElement("li")
+        // Append the input value to the new li element
+        li.appendChild(document.createTextNode(addItem.value));
+        // Append to the ul element stored in listedItems
+        listedItems.appendChild(li);
+
+        // Create HTML element button
+        const newButton = document.createElement('button');
+        // Assign it the removeable class that is the same as our other li elements
+        newButton.classList.add('removeable');
+        // Create a variable to store the "remove" text
+        const removeText = document.createTextNode("remove")
+        // Append that variable to the button
+        newButton.appendChild(removeText)
+        // If button is clicked, delete the parent of the "button" which is the li element
+        newButton.addEventListener('click', function(e)
+        {
+            e.currentTarget.parentNode.remove();
+        });
+
+        // Append button to li element which is appended to ul element
+        li.appendChild(newButton);
+        // Reset the input box to empty string
+        addItem.value = ""
+    }  
 }
-const numArray1 = [1, 2, 4]
-const numArray2 = [3, 5]
-console.log("Question 2: " + concatAndSort(numArray1, numArray2))
 
-// 3 - Sort the array and return the min and second max value
+// Create array variable for removeable HTML class, this adds functionality to existing list items
+const removeButtons = document.getElementsByClassName('removeable')
 
-let minAndSecondMax = (array) =>
+// Add event listeners to all existing remove buttons, not new ones
+for (let i = 0; i < removeButtons.length; i++)
 {
-    array.sort();
-    console.log("Question 3: Smallest element: " + array[0] + ", Second largest element: " + array[array.length - 2])
+    removeButtons[i].addEventListener('click', function(e) 
+    {
+        // If remove is clicked, delete the parent which is the li element
+        e.currentTarget.parentNode.remove();
+    }, false);
 }
-const numArray3 = [2, 4, 6, 1, 5]
-minAndSecondMax(numArray3)
-
-// 4 - Replace every uppercase letters in a string into lowercase
-
-let toLowerCase = (string) =>
-{
-    return string.toLowerCase()
-}
-let example = "ApPle"
-// AppPle -> Apple ??? should be apple?
-console.log("Question 4: " + toLowerCase(example))
-
-// 5 - Remove duplicates from a sorted array
-
-let removeDuplicates = (array) =>
-{
-    let noDuplicates = [...new Set(array)]
-
-    return noDuplicates
-}
-const numArray4 = [1, 2, 3, 3, 3, 4, 5, 5]
-console.log("Question 5: " + removeDuplicates(numArray4))

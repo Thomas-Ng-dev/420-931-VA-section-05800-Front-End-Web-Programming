@@ -1,0 +1,59 @@
+body
+{
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(60,60,138,1) 35%, rgba(0,212,255,1) 100%); 
+}
+
+
+
+#shoppingListCont
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 100px;
+}
+
+ul
+{
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+li
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+li:nth-child(even) 
+{
+    background: yellow
+}
+li:nth-child(odd) 
+{
+    background: green
+}
+
+#shoppingList
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: blueviolet;
+    color: white;
+}
+
+#addItem
+{
+    display: none;
+}
+
+.listedItem
+{
+    border: 2px;
+    border-color: black;
+}

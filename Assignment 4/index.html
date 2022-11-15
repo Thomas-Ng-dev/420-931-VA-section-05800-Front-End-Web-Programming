@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <img id="logo" src="Logo.png">
+        <div id="homeLoginBTN">
+            <button id="home">Home</button>
+            <button id="login">LOGIN</button>
+        </div>    
+    </nav>
+
+    <div id="firstRow">
+        
+        <!-- <div id="imageContainer"> -->
+            <img id ="mainPic" src="SL1 1.png">
+        <!-- </div> -->
+        <div id="boxedText">
+            <p>
+                <span><h1>Learn American Sign Language</h1><br></span>
+                <span><h3>
+                    Learn ASL for free from the comfort of your
+                    home at your convenience. No tutoring is needed. 
+                    Our application will help you learn and evaluate your progress.
+                </h3></span>
+                <button>Get Started</button>
+                <button>Continue as a Guest</button>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="sectionBreak">
+        <span>
+          Interactive ASL lessons
+        </span>
+    </div>
+
+    <div class="textPic">
+        <p>
+            In addition to predefined lessons, we offer interactive lessons.
+            With the help of your webcam, you will get the chance to practice
+            what you learned.
+        </p>
+        <img src="P1 1.png">
+    </div>
+    
+    <div class="sectionBreak">
+        <span>
+          Have Fun Learning
+        </span>
+    </div>
+
+    <div class="textPic">
+        <img src="bingoo 1.png">
+        <p>
+            We offer fun games designed for the hearing impaired to
+            reinforce learning. These games will include bindo and flashcards.
+        </p>
+    </div>
+
+    <div class="sectionBreak">
+        <span>
+          Resources
+        </span>
+    </div>
+
+    <div class="textPic">
+        <p>
+            Our missions is to facilitate the ASL learning process for those
+            who are hearing impaired. In keeping with our mission, we will
+            provide helpful links with tips and other resources to help
+            those who need guidance. In addition, our users will be able
+            to communicate with other students and share knowledge and
+            resources.
+        </p>
+        <img src="P2 1.png">
+    </div>
+
+    <hr>
+
+    <div id="gridContainer">
+        <div class="gridItem">About us</div>
+        <div class="gridItem">Careers</div>
+        <div class="gridItem">Terms</div>
+        <div class="gridItem">Contact us</div>
+        <div class="gridItem">Help and Support</div>
+        <div class="gridItem">Privacy policy</div>
+    </div>
+
+    <footer>
+        <p>
+            &#169 2022, In Plain Sight. All rights reserved.
+        </p>
+    </footer>
+
+    <div id="modalLoginJS" class="modalLogin">
+        <div id="modalLoginContent">
+            
+            <nav class="navModal">
+                <div>
+                    Login
+                </div>
+                <span class="close">
+                    &times;
+                </span> 
+            </nav>
+
+            <div>
+                <form>
+                    
+                    <input type="text" id="emailLogin" name="Email" placeholder="Email">
+                
+                    <input type="text" id="passwordLogin" name="Password" placeholder="Password">
+
+                    <button>Login</button>
+                </form>
+            </div>
+
+            <div class="sectionBreak">
+                <span>
+                  or
+                </span>
+            </div>
+
+            <div>
+                Forgot your password?<br>
+                <button>Click Here</button>
+            </div>
+
+            <div class="sectionBreak">
+                <span>
+                  or
+                </span>
+            </div>
+
+            <div>
+                Don't have an account?<br>
+                <button id="signUp">Sign Up</button>
+            </div>
+
+            
+        </div>
+
+    </div>
+    
+    <div id="modalSignUpJS" class="signUpLogin">
+        <div id="modalSignUpContent">
+
+            <nav class="navModal">
+                <div>
+                    Create Your Account
+                </div>
+                <span class="close">
+                    &times;
+                </span> 
+            </nav>
+
+            <div>
+                <form>
+                    
+                    <input type="text" id="emailCreate" name="Email" placeholder="Email">
+                
+                    <input type="text" id="usernameCreate" name="Username" placeholder="Username">
+
+                    <input type="text" id="passwordCreate" name="Password" placeholder="Password">
+
+                    <p>
+                        By clicking Sign Up, you agree to our 
+                        <span color="blue">Terms of Service</span>.
+                    </p>
+                    <button>Sign Up</button>
+
+                    <div class="sectionBreak">
+                        <span>
+                          or
+                        </span>
+                    </div>
+
+                    <div>
+                        <p>
+                            Already have an account?<br>
+                            <button>LOGIN</button>
+                        </p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+body
+{
+    margin:0px;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #AD86FF;
+    height: 15vh;
+}
+
+h1
+{
+    color:  #6F488E;
+}
+
+button
+{
+    color: white;
+    background-color: #6F488E;
+}
+
+#home
+{
+    border: none;
+    background-color: transparent;
+}
+
+#logo
+{
+    margin: 5px;
+    margin-left: 50px;
+    padding: 5px;
+}
+
+#homeLoginBTN
+{
+    display: flex;
+    align-self: center;
+    margin-right: 10%;
+}
+
+#firstRow
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    /* position: relative; */
+    /* justify-content: center; */
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+}
+
+/* #imageContainer
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+} */
+
+#mainPic
+{
+    /* display: flex; */
+    /* height: 400px;   */  
+    /* position: absolute; */
+    /* float: right; */
+    grid-area: 2 / 2 / 1 / 1;
+}
+
+#boxedText
+{
+    background: rgba(79, 51, 170, 0.4);
+    z-index: 10;
+    margin: 10%;
+    padding: 20px;
+}
+
+.textPic
+{
+    display: flex;
+    justify-content: center;
+    /* margin-left: 15%; */
+    /* margin-right: 15%; */
+    margin: 15%;
+}
+
+#gridContainer
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+
+.gridItem
+{
+    color: blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer
+{
+    background-color: #6F488E;
+    color: white;
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+.sectionBreak
+{
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.sectionBreak span
+{
+    font-size: 40px;
+    background-color: white;
+    padding: 0 10px;
+    color: #6F488E;
+}
+
+.modalLogin
+{
+    display: none; 
+    position: fixed; 
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    
+}
+
+#modalLoginContent
+{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    align-items: center;
+    background-color: #fefefe;
+    margin: auto;
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 80%;
+    
+}
+  
+.close 
+{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus 
+{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modalSignUp
+{
+    display: none; 
+    position: fixed; 
+    z-index: 5; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    
+}
+
+#modalSignUpContent
+{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    align-items: center;
+    background-color: #fefefe;
+    margin: auto;
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 80%;
+    
+}
+
+.navModal
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #AD86FF;
+    /* margin: auto; */
+    /* padding: auto; */
+    height: 10%;
+}
+
+.navModal div
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
